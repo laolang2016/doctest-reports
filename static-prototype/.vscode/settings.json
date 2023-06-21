@@ -1,0 +1,29 @@
+{
+    // 隐藏了某些文件
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+
+        "**/node_modules": true,
+        "**/dist": true,
+    },
+     // 修改了注释的颜色
+     "editor.tokenColorCustomizations": {
+        "comments": {
+            "fontStyle": "",
+            "foreground": "#4a524e"
+        }
+    },
+    // 任务栏显示任务快捷按钮, 来自插件 Taks Butons
+    "VsCodeTaskButtons.showCounter": true,
+    "VsCodeTaskButtons.tasks": [
+        {
+            "label": "$(notebook-execute) npm: dev",
+            "task": "npm: dev"
+        }
+    ]
+}
