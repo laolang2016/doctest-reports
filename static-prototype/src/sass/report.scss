@@ -120,11 +120,11 @@ body {
             flex: 1;
 
             &.active {
-                display: block;
+                display: flex !important;
             }
 
             &.dashboard {
-                display: flex;
+                display: none;
                 flex-direction: column;
 
                 .header {
@@ -268,6 +268,7 @@ body {
                             .chart {
                                 width: 100px;
                                 height: 80px;
+                                padding-top: 15px;
                             }
 
                             .icon-box {
