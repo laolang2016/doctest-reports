@@ -28,14 +28,15 @@ body {
 
     .logo {
         width: 70px;
-        background-color: #1565c0;
+        background-color: rgba(21, 101, 192,0.2);
 
         display: flex;
         justify-content: center;
+        align-items: center;
 
         img {
-            height: 52px;
-            width: 46px;
+            height: 39px;
+            width: 34.5px;
         }
     }
 
@@ -165,15 +166,16 @@ body {
                                 }
                             }
 
-                            &.filter-toggle{
+                            &.filter-toggle {
                                 position: relative;
 
-                                .filter-box{
+                                .filter-box {
                                     position: absolute;
                                     background-color: #fff;
                                     width: 200px;
                                     display: none;
-                                    a{
+
+                                    a {
                                         display: flex;
                                         justify-content: space-between;
                                         line-height: 40px;
@@ -181,24 +183,27 @@ body {
                                         color: #222222;
                                         font-size: 12px;
                                         padding: 5px 15px;
-                                        &:last-child{
+
+                                        &:last-child {
                                             border-top: 1px solid #ccc;
                                         }
-                                        &:hover{
+
+                                        &:hover {
                                             background-color: #eee;
                                         }
 
-                                        .success{
+                                        .success {
                                             color: #4caf50;
                                             font-size: 20px;
                                         }
-                                        .failed{
+
+                                        .failed {
                                             color: #f44336;
                                             font-size: 24px;
                                         }
                                     }
 
-                                    &.active{
+                                    &.active {
                                         display: block;
                                         top: 37px;
                                     }
@@ -207,20 +212,98 @@ body {
                         }
                     }
                 }
-                
+
                 .statistics {
                     height: 180px;
-                    background-color: pink;
                     display: none;
 
                     &.active {
                         display: block;
                     }
+
+                    .statistics-wrapper {
+                        display: flex;
+                        height: 100%;
+                        flex-direction: row;
+
+                        .statistics-item {
+                            flex: 1;
+                            padding: 20px;
+                            border-left: 1px solid #eee;
+                            border-bottom: 1px solid #eee;
+
+                            &:first-child {
+                                border-left: none;
+                            }
+
+                            display: flex;
+                            justify-content: space-between;
+
+                            .tip-box {
+                                height: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                flex-direction: column;
+
+                                .title {
+                                    font-size: 14px;
+                                }
+
+                                .tip {
+                                    font-size: 12px;
+
+                                    span {
+                                        display: block;
+                                        color: rgba(0, 0, 0, 0.7);
+
+                                        i {
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            color: rgba(0, 0, 0, 1);
+                                        }
+                                    }
+                                }
+                            }
+
+                            .chart {
+                                width: 100px;
+                                height: 80px;
+                            }
+
+                            .icon-box {
+                                height: 100%;
+                                display: flex;
+                                justify-content: start;
+                                flex-direction: column;
+
+                                span {
+                                    font-size: 12px;
+                                    display: inline-block;
+                                    line-height: 20px;
+                                    height: 20px;
+
+                                    i {
+                                        display: inline-block;
+                                        width: 10px;
+                                        height: 10px;
+                                        margin-right: 5px;
+                                        &.icon-pass {
+                                            background-color: #00af00;
+                                        }
+
+                                        &.icon-failed {
+                                            background-color: #f7464a;
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
                 }
 
                 .test-suite-list {
                     flex: 1;
-                    background-color: gray;
                 }
             }
 
