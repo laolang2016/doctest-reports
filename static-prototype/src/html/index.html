@@ -8,7 +8,9 @@
     <title>doctest report</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../libs/bootstrap-3.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../libs/bootstrap-3.4.1/css/bootstrap.min.css"> -->
+
+    <link rel="stylesheet" href="../libs/iconfont/iconfont.css">
 
     <link rel="stylesheet" href="../css/report.css">
 
@@ -37,8 +39,33 @@
     </div>
     <!-- / header -->
 
+    <div class="container">
+      <div class="menus">
+        <a href="javascript:void(0)" class="active">
+          <span class="iconfont icon-dashboard"></span>
+        </a>
+        <a href="javascript:void(0)">
+          <span class="iconfont icon-bugreport"></span>
+        </a>
+        <a href="javascript:void(0)">
+          <span class="iconfont icon-track_changes"></span>
+        </a>
+      </div>
+      <div class="content-list">
+        <div class="content dashboard active">
+          dashboard
+        </div>
+        <div class="content bugreport">
+          bugreport
+        </div>
+        <div class="content track">
+          track
+        </div>
+      </div>
+    </div>
+
     <script src="../libs/jquery-2.1.4/jquery.min.js"></script>
-    <script src="../libs/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script src="../libs/bootstrap-3.4.1/js/bootstrap.min.js"></script> -->
     <script src="../js/reports.min.js"></script>
   </body>
 </html>

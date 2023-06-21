@@ -1,0 +1,30 @@
+{
+  "id": "4133897",
+  "name": "doctest reports",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "489919",
+      "name": "bug_report",
+      "font_class": "bugreport",
+      "unicode": "eaa1",
+      "unicode_decimal": 60065
+    },
+    {
+      "icon_id": "18072069",
+      "name": "dashboard",
+      "font_class": "dashboard",
+      "unicode": "e7dd",
+      "unicode_decimal": 59357
+    },
+    {
+      "icon_id": "27290844",
+      "name": "track_changes",
+      "font_class": "track_changes",
+      "unicode": "eaae",
+      "unicode_decimal": 60078
+    }
+  ]
+}

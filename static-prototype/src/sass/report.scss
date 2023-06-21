@@ -1,13 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 // 顶部布局
 .header-container {
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
 
     .logo {
-        width: 46px;
+        width: 70px;
         background-color: #1565c0;
+        
+        display: flex;
+        justify-content: center;
 
         img {
             height: 52px;
@@ -18,7 +39,7 @@
     .right {
         background-color: #222222;
         color: #ffffff;
-        width: calc(100vw - 46px);
+        flex: 1;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -51,6 +72,54 @@
                 }
             }
 
+        }
+    }
+}
+
+
+.container{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: row;
+    .menus{
+        width: 70px;
+        display: flex;
+        flex-direction: column;
+        background-color: #f7f7f7;
+        a{
+            display: flex;
+            height: 70px;
+            align-items: center;
+            justify-content: center;
+
+            &.active{
+                background-color: #eaeaea;
+            }
+            &:hover{
+                background-color: #eaeaea;
+            }
+        }
+    }
+    
+    .content-list{
+        flex: 1;
+        display: flex;
+        .content{
+            display: none;
+            flex: 1;
+            &.active{
+                display: block;
+            }
+            &.dashboard{
+
+            }
+            &.bugreport{
+
+            }
+            &.track{
+
+            }
         }
     }
 }
