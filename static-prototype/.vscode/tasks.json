@@ -7,6 +7,11 @@
 			"problemMatcher": [],
 			"label": "npm: dev",
 			"detail": "npx gulp"
+		},
+		{
+			"type": "shell",
+			"command":"npx gulp libs",
+			"label": "libs"
 		}
 	]
 }

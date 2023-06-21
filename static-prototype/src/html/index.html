@@ -53,7 +53,47 @@
       </div>
       <div class="content-list">
         <div class="content dashboard active">
-          dashboard
+          <div class="header">
+            <ul>
+              <li class="filter-toggle">
+                <a href="javascript:void(0);">
+                  <span>状态</span>
+                  <span class="iconfont icon-warning"></span><span></span>
+                </a>
+                <div class="filter-box">
+                  <a href="javascript:void(0);" id="filter-success">
+                    <span class="txt">成功</span>
+                    <span class="iconfont icon-duigou success"></span>
+                  </a>
+                  <a href="javascript:void(0);" id="filter-failed">
+                    <span class="txt">失败</span>
+                    <span class="iconfont icon-cuowu failed"></span>
+                  </a>
+                  <a href="javascript:void(0);" id="filter-all">
+                    <span class="txt">显示所有</span>
+                  </a></a>
+                </div>
+              </li>
+              <li id="statistics-toggle">
+                <a href="javascript:void(0);">
+                  <span>总览</span>
+                  <span class="iconfont icon-dashboard"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="statistics">
+            <div class="test-case">
+
+            </div>
+            <div class="assert">
+
+            </div>
+          </div>
+          <div class="test-suite-list">
+            <div class="test-suite">
+            </div>
+          </div>
         </div>
         <div class="content bugreport">
           bugreport

@@ -1,15 +1,18 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
 }
-html{
+
+html {
     height: 100%;
 }
-body{
+
+body {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -26,7 +29,7 @@ body{
     .logo {
         width: 70px;
         background-color: #1565c0;
-        
+
         display: flex;
         justify-content: center;
 
@@ -35,7 +38,7 @@ body{
             width: 46px;
         }
     }
-    
+
     .right {
         background-color: #222222;
         color: #ffffff;
@@ -61,6 +64,7 @@ body{
 
             a {
                 color: #ffffff;
+
                 .version {
                     margin-left: 15px;
                     background-color: #1565c0;
@@ -77,49 +81,152 @@ body{
 }
 
 
-.container{
+.container {
     display: flex;
     flex: 1;
     justify-content: space-between;
     flex-direction: row;
-    .menus{
+
+    .menus {
         width: 70px;
         display: flex;
         flex-direction: column;
         background-color: #f7f7f7;
-        a{
+
+        a {
             display: flex;
             height: 70px;
             align-items: center;
             justify-content: center;
+            color: #222222;
 
-            &.active{
+            &.active {
                 background-color: #eaeaea;
             }
-            &:hover{
+
+            &:hover {
                 background-color: #eaeaea;
             }
         }
     }
-    
-    .content-list{
+
+    .content-list {
         flex: 1;
         display: flex;
-        .content{
+
+        .content {
             display: none;
             flex: 1;
-            &.active{
+
+            &.active {
                 display: block;
             }
-            &.dashboard{
 
-            }
-            &.bugreport{
+            &.dashboard {
+                display: flex;
+                flex-direction: column;
 
-            }
-            &.track{
+                .header {
+                    height: 40px;
+                    background-color: #f5f5f5;
 
+                    ul {
+                        list-style-type: none;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        li {
+                            margin-left: 15px;
+                            height: 100%;
+
+                            a {
+                                color: #038BE5;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+
+                                span {
+                                    &:first-child {
+                                        font-size: 14px;
+                                    }
+
+                                    &:last-child {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+
+                            &.active {
+                                a {
+                                    color: #E91E63;
+                                }
+                            }
+
+                            &.filter-toggle{
+                                position: relative;
+
+                                .filter-box{
+                                    position: absolute;
+                                    background-color: #fff;
+                                    width: 200px;
+                                    display: none;
+                                    a{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        line-height: 40px;
+                                        height: 40px;
+                                        color: #222222;
+                                        font-size: 12px;
+                                        padding: 5px 15px;
+                                        &:last-child{
+                                            border-top: 1px solid #ccc;
+                                        }
+                                        &:hover{
+                                            background-color: #eee;
+                                        }
+
+                                        .success{
+                                            color: #4caf50;
+                                            font-size: 20px;
+                                        }
+                                        .failed{
+                                            color: #f44336;
+                                            font-size: 24px;
+                                        }
+                                    }
+
+                                    &.active{
+                                        display: block;
+                                        top: 37px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .statistics {
+                    height: 180px;
+                    background-color: pink;
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+
+                .test-suite-list {
+                    flex: 1;
+                    background-color: gray;
+                }
             }
+
+            &.bugreport {}
+
+            &.track {}
         }
     }
 }

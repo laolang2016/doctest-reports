@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "4266146",
+      "name": "错误",
+      "font_class": "cuowu",
+      "unicode": "e70e",
+      "unicode_decimal": 59150
+    },
+    {
+      "icon_id": "34272973",
+      "name": "对钩",
+      "font_class": "duigou",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "7009039",
+      "name": "warning",
+      "font_class": "warning",
+      "unicode": "e73d",
+      "unicode_decimal": 59197
+    },
+    {
       "icon_id": "489919",
       "name": "bug_report",
       "font_class": "bugreport",
