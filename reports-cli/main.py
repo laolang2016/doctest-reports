@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
-# !/bin/python3
-
+# !/usr/bin/python
 
 import json
 import xml.dom.minidom
+import sys
 
-datapath = 'F:/github/doctest-reports/reports-cli/testdata/result.xml'
+# datapath = 'F:/github/doctest-reports/reports-cli/testdata/result.xml'
+# top_cmakescript_path = '/home/laolang/code/doctest-study'
 
-# 顶层 CMakeLists.txt 所在路径
-top_cmakescript_path = '/home/laolang/code/doctest-study'
+datapath = ''
+top_cmakescript_path = ''
 
 # json 数据
 data = {}
@@ -328,8 +329,22 @@ def refactor_data():
 
 
 if __name__ == '__main__':
+    top_cmakescript_path = sys.argv[1]
+    datapath = sys.argv[2]
+    outpath = sys.argv[3]
+
+    # print(top_cmakescript_path)
+    # print(datapath)
+    # print(outpath)
+
+    # outpath = 'F:/github/doctest-reports/static-prototype/src/js/data.js'
+
     parse_xml(datapath)
     fill_id()
     refactor_data()
-    print(json.dumps(json_data, ensure_ascii=False))
-    print(json.dumps(data, ensure_ascii=False))
+    # print(json.dumps(json_data, ensure_ascii=False))
+    # print(json.dumps(data, ensure_ascii=False))
+    content = json.dumps(json_data, ensure_ascii=False)
+    content = 'const dashboardData =' + content
+    with open('F:/github/doctest-reports/static-prototype/src/js/data.js', 'w', encoding='utf-8') as f:
+        f.write(content)
