@@ -177,6 +177,16 @@ def parse_test_suite(suite):
         case_infos.append(parse_test_case(testcase))
     suite_info['cases'] = case_infos
 
+    case_success_count = 0
+    case_failed_count = 0
+    for case in suite_info['cases']:
+        if case['success']:
+            case_success_count = case_success_count + 1
+        else:
+            case_failed_count = case_failed_count + 1
+    suite_info['case_success'] = case_success_count
+    suite_info['case_failed'] = case_failed_count
+
     return suite_info
 
 
@@ -246,7 +256,9 @@ def refactor_data():
         suite_info = {
             'id': suite['id'],
             'name': suite['name'],
-            'success': suite['success']
+            'success': suite['success'],
+            'case_success': suite['case_success'],
+            'case_failed': suite['case_failed']
         }
 
         case_list_info = {
