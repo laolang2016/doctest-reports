@@ -277,17 +277,17 @@ def refactor_data():
             if case_info['has_subcase']:
                 case_info['subcase_success'] = case['subcase_success']
                 case_info['subcase_failed'] = case['subcase_failed']
-                subcases_info_list = []
+                subcases_info_list = {
+                    'id': subcase_list_id_prefix + str(subcase_list_id_curr)
+                }
+                subcase_list_id_curr = subcase_list_id_curr + 1
+                subcase_list = []
                 for subcase in case['subcases']:
                     subcase_info = {
-                        'id': subcase_list_id_prefix + str(subcase_list_id_curr),
-                        'subcases_list': {
                             'id': subcase['id'],
                             'name': subcase['name'],
                             'success': subcase['success']
-                        }
                     }
-                    subcase_list_id_curr = subcase_list_id_curr + 1
                     if not subcase['success']:
                         subcase_info['has_expressions'] = True
                         subcase_info['expressions_list'] = {
@@ -298,7 +298,8 @@ def refactor_data():
                         pass
                     else:
                         subcase_info['has_expressions'] = False
-                    subcases_info_list.append(subcase_info)
+                    subcase_list.append((subcase_info))
+                subcases_info_list['subcase_list'] = subcase_list
                 case_info['subcases_info_list'] = subcases_info_list
             else:
                 case_info['has_expressions'] = 'expressions' in case
