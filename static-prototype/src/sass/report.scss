@@ -362,7 +362,7 @@ body {
                                 .pass,
                                 .failed {
                                     font-style: normal;
-                                    border-radius: 50%;
+                                    // border-radius: 50%;
                                     color: #fff;
                                     padding: 3px;
                                     font-size: 12px;
@@ -396,7 +396,7 @@ body {
                         }
 
                         .case-item {
-                            display: flex;
+                            display: none;
                             height: 45px;
                             width: 100%;
                             align-items: center;
@@ -408,6 +408,10 @@ body {
                                 background-color: #f7f7f7;
                             }
 
+                            &.show{
+                                display: flex !important;
+                            }
+
                             &.active{
                                 background-color: #f7f7f7;
                             }
@@ -416,10 +420,12 @@ body {
                                 display: inline-block;
                                 margin-left: 10px;
                                 font-size: 18px;
-                            }
-
-                            .source-line {
-                                color: #038BE5;
+                                .source-line {
+                                    color: #038BE5;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    margin-left: 5px;
+                                }
                             }
 
                             .tip {
@@ -427,15 +433,6 @@ body {
                                 margin-right: 10px;
                                 width: 60px;
                                 text-align: right;
-
-                                .pass,
-                                .failed {
-                                    font-style: normal;
-                                    border-radius: 50%;
-                                    color: #fff;
-                                    padding: 3px;
-                                    font-size: 12px;
-                                }
 
                                 .success {
                                     color: #FFF;
@@ -453,11 +450,21 @@ body {
                                     padding: 2px;
                                 }
 
-                                .pass {
+                                .pass-count,
+                                .failed-count {
+                                    font-style: normal;
+                                    // border-radius: 50%;
+                                    color: #fff;
+                                    padding: 3px;
+                                    font-size: 12px;
+                                    width: 22px;
+                                }
+
+                                .pass-count {
                                     background-color: #4caf50;
                                 }
 
-                                .failed {
+                                .failed-count {
                                     background-color: #f44336;
                                     margin-left: 10px;
                                 }
@@ -471,7 +478,7 @@ body {
                         border-right: 1px solid #eee;
 
                         .subcase-item {
-                            display: flex;
+                            display: none;
                             height: 45px;
                             width: 100%;
                             align-items: center;
@@ -483,6 +490,10 @@ body {
                                 background-color: #f7f7f7;
                             }
 
+                            &.show{
+                                display: flex !important;
+                            }
+
                             &.active{
                                 background-color: #f7f7f7;
                             }
@@ -491,11 +502,15 @@ body {
                                 display: inline-block;
                                 margin-left: 10px;
                                 font-size: 18px;
+                                .source-line {
+                                    color: #038BE5;
+                                    font-size: 13px;
+                                    font-style: normal;
+                                    padding-left: 3px;
+                                }
                             }
 
-                            .source-line {
-                                color: #038BE5;
-                            }
+                            
 
                             .tip {
                                 display: inline-block;
@@ -542,29 +557,54 @@ body {
                     .detail {
                         height: 100%;
                         flex-grow: 1;
-                        .expr{
-                            display: flex;
-                            justify-content: space-between;
-                            span{
-                                display: inline-block;
-                                flex: 1;
-                                text-align: center;
-                                height: 60px;
-                                line-height: 60px;
-                                font-size: 16px;
-                                border-bottom: 1px solid #eee;
-                                border-right: 1px solid #eee;
-                                font-weight: 600;
-                                &:last-child{
-                                    border-right: none;
+                        .detail-item{
+                            border-top: 1px solid #eee;
+                            display: none;
+
+                            &.show{
+                                display: block !important;
+                            }
+
+                            &:nth-child(even){
+                                background-color: #eee;
+                            }
+
+                            
+                            &:first-child{
+                                border-top: none;
+                            }
+                            .expr{
+                                display: flex;
+                                justify-content: space-between;
+                                span{
+                                    display: inline-block;
+                                    flex: 1;
+                                    text-align: center;
+                                    height: 60px;
+                                    line-height: 60px;
+                                    font-size: 16px;
+                                    border-bottom: 1px solid #ccc;
+                                    border-right: 1px solid #ccc;
+                                    font-weight: 600;
+                                    &:last-child{
+                                        border-right: none;
+                                    }
                                 }
                             }
+                            .source-line{
+                                padding: 5px 0 5px 10px;
+                                color: #038BE5;
+                                text-align: left;
+                                border-bottom: 1px solid #ccc;
+                            }
+                            .info{
+                                padding: 10px;
+                                font-size: 13px;
+                                color: rgba(2,2,2,0.8);
+                                color: #E91E63;
+                            }
                         }
-                        .info{
-                            padding: 10px;
-                            font-size: 13px;
-                            color: rgba(2,2,2,0.8);
-                        }
+
                     }
                 }
             }

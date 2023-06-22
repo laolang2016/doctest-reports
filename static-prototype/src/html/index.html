@@ -90,8 +90,8 @@
                     <span>Suites</span>
                   </div>
                   <div class="tip">
-                    <span><i>7</i> suite(s) 通过</span>
-                    <span><i>7</i> suite(s) 失败</span>
+                    <span><i id="suite-success-count"></i> suite(s) 通过</span>
+                    <span><i id="suite-failed-count"></i> suite(s) 失败</span>
                     <span><i>0</i> suite(s) 跳过</span>
                   </div>
                 </div>
@@ -109,8 +109,8 @@
                     <span>Cases</span>
                   </div>
                   <div class="tip">
-                    <span><i>7</i> case(s) 通过</span>
-                    <span><i>7</i> case(s) 失败</span>
+                    <span><i id="case-success-count"></i> case(s) 通过</span>
+                    <span><i id="case-failed-count"></i> case(s) 失败</span>
                     <span><i>0</i> case(s) 跳过</span>
                   </div>
                 </div>
@@ -128,8 +128,8 @@
                     <span>Asserts</span>
                   </div>
                   <div class="tip">
-                    <span><i>7</i> assert(s) 通过</span>
-                    <span><i>7</i> assert(s) 失败</span>
+                    <span><i id="assert-success-count"></i> assert(s) 通过</span>
+                    <span><i id="assert-failed-count"></i> assert(s) 失败</span>
                     <span><i>0</i> assert(s) 跳过</span>
                   </div>
                 </div>
@@ -144,77 +144,70 @@
             </div>
           </div>
           <div class="test-suite-list">
-            <div class="test-suite">
+            <div class="test-suite" id="test-suite">
               <div class="title">
                 Test Suite(s)
               </div>
-              <div class="suite-item active">
+              <!-- <div class="suite-item active">
                 <span class="suite-name">suite 1</span>
                 <span class="tip">
                   <i class="pass">10</i>
                   <i class="failed">10</i>
                 </span>
-              </div>
-              <div class="suite-item">
-                <span class="suite-name">suite 1</span>
-                <span class="tip">
-                  <i class="pass">10</i>
-                  <i class="failed">10</i>
-                </span>
-              </div>
+              </div> -->
             </div>
             <div class="test-case">
               <div class="title">
                 Test Case(s)
               </div>
-              <div class="case-list">
-                <div class="case-item">
-                  <span class="case-name">case 1</span>
-                  <span class="source-line">test/test_util_calc.cpp:16</span>
+              <div class="case-list" id="test-case">
+                <!-- <div class="case-item active">
+                  <span class="case-name">case 1<i class="source-line">test/test_util_calc.cpp:16</i></span>
                   <span class="tip">
                     <span class="iconfont icon-duigou success"></span>
                   </span>
                 </div>
                 <div class="case-item">
-                  <span class="case-name">case 1</span>
-                  <span class="source-line">test/test_util_calc.cpp:16</span>
+                  <span class="case-name">case 1<i class="source-line">test/test_util_calc.cpp:16</i></span>
                   <span class="tip">
                     <span class="iconfont icon-cuowu failed"></span>
                   </span>
                 </div>
-                <div class="case-item active">
-                  <span class="case-name">case 1</span>
-                  <span class="source-line">test/test_util_calc.cpp:16</span>
+                <div class="case-item">
+                  <span class="case-name">test_calc_add_1<i class="source-line">test/test_util_calc.cpp:16</i></span>
                   <span class="tip">
-                    <i class="pass">10</i>
-                    <i class="failed">10</i>
+                    <i class="pass-count">10</i>
+                    <i class="failed-count">10</i>
                   </span>
-                </div>
+                </div> -->
               </div>
             </div>
-            <div class="subcase">
-              <div class="subcase-item">
-                <span class="subcase-name">case 1</span>
-                <span class="source-line">test/test_util_calc.cpp:16</span>
+            <div class="subcase" id="subcase">
+              <!-- <div class="subcase-item">
+                <span class="subcase-name">case 1<i class="source-line">test/test_util_calc.cpp:16</i></span>
                 <span class="tip">
                   <span class="iconfont icon-duigou success"></span>
                 </span>
               </div>
               <div class="subcase-item active">
-                <span class="subcase-name">case 1</span>
-                <span class="source-line">test/test_util_calc.cpp:16</span>
+                <span class="subcase-name">case 1<i class="source-line">test/test_util_calc.cpp:16</i></span>
                 <span class="tip">
                   <span class="iconfont icon-cuowu failed"></span>
                 </span>
-              </div>
+              </div> -->
             </div>
-            <div class="detail">
-              <div class="expr">
-                <span>expected == actual</span>
-                <span>4 == 3</span>
-              </div>
-              <div class="info">
-                add2 测试失败. 期望:4, 实际:3
+            <div class="detail" id="detail">
+              <div class="detail-item">
+                <div class="expr">
+                  <span>expected == actual</span>
+                  <span>4 == 3</span>
+                </div>
+                <div class="source-line">
+                  test/test_util_calc.cpp:16
+                </div>
+                <div class="info">
+                  add2 测试失败. 期望:4, 实际:3
+                </div>
               </div>
             </div>
           </div>

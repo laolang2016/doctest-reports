@@ -1,4 +1,4 @@
-const dashboardData = {
+{
     "suites": [
         {
             "id": "suite_id_1",
