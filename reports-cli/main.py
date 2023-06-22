@@ -116,7 +116,10 @@ def parse_sub_case(sub_case):
     :param sub_case: subcase xml 节点
     :return: subcase 信息
     """
-    sub_case_info = {'name': sub_case.getAttribute('name')}
+    sub_case_info = {'name': sub_case.getAttribute('name'),
+                     'source_line':
+                         compress_source_name(sub_case.getAttribute('filename')) + ':' + sub_case.getAttribute('line')
+                     }
     expressions = sub_case.getElementsByTagName('Expression')
     if 0 != len(expressions):
         sub_case_info['expressions'] = parse_expression(expressions)
@@ -284,9 +287,10 @@ def refactor_data():
                 subcase_list = []
                 for subcase in case['subcases']:
                     subcase_info = {
-                            'id': subcase['id'],
-                            'name': subcase['name'],
-                            'success': subcase['success']
+                        'id': subcase['id'],
+                        'name': subcase['name'],
+                        'success': subcase['success'],
+                        'source_line': subcase['source_line']
                     }
                     if not subcase['success']:
                         subcase_info['has_expressions'] = True
