@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctest binary="./cm_test" version="2.4.11">
+    <Options order_by="file" rand_seed="0" first="0" last="4294967295" abort_after="0"
+             subcase_filter_levels="2147483647" case_sensitive="false" no_throw="false" no_skip="false"/>
+    <TestSuite name="test_calc">
+        <TestCase name="test_calc_add_1" filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp" line="14">
+            <SubCase name="test_calc_add_1_1" filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp"
+                     line="16">
+            </SubCase>
+            <SubCase name="test_calc_add_1_2" filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp"
+                     line="20">
+                <Expression success="false" type="CHECK"
+                            filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp" line="22">
+                    <Original>
+                        4 == calc->add(1, 2)
+                    </Original>
+                    <Expanded>
+                        4 == 3
+                    </Expanded>
+                </Expression>
+            </SubCase>
+            <OverallResultsAsserts successes="1" failures="1" test_case_success="false"/>
+        </TestCase>
+        <TestCase name="test_calc_add_2" filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp" line="26">
+            <Expression success="false" type="CHECK" filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp"
+                        line="30">
+                <Original>
+                    expected == actual
+                </Original>
+                <Expanded>
+                    4 == 3
+                </Expanded>
+                <Info>
+                    add2 测试失败. 期望:4, 实际:3
+                </Info>
+            </Expression>
+            <OverallResultsAsserts successes="0" failures="1" test_case_success="false"/>
+        </TestCase>
+        <TestCase name="test_calc_add_3" filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp" line="33">
+            <Expression success="false" type="CHECK" filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp"
+                        line="35">
+                <Original>
+                    4 == calc->add(1, 2)
+                </Original>
+                <Expanded>
+                    4 == 3
+                </Expanded>
+            </Expression>
+            <OverallResultsAsserts successes="0" failures="1" test_case_success="false"/>
+        </TestCase>
+    </TestSuite>
+    <TestSuite>
+        <TestCase name="test_sum" filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp" line="39">
+            <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+        </TestCase>
+        <TestCase name="test_sum2" filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp" line="45">
+            <Expression success="false" type="CHECK" filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp"
+                        line="48">
+                <Original>
+                    4 == calc->add(1, 2)
+                </Original>
+                <Expanded>
+                    4 == 3
+                </Expanded>
+            </Expression>
+            <OverallResultsAsserts successes="0" failures="1" test_case_success="false"/>
+        </TestCase>
+        <TestCase name="test_sum3" filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp" line="51">
+            <Expression success="false" type="CHECK" filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp"
+                        line="54">
+                <Original>
+                    4 == calc->add(1, 2)
+                </Original>
+                <Expanded>
+                    4 == 3
+                </Expanded>
+                <Info>
+                    test_sum3 测试失败.
+                </Info>
+            </Expression>
+            <Expression success="false" type="CHECK" filename="/home/laolang/code/doctest-study/test/test_util_calc.cpp"
+                        line="55">
+                <Original>
+                    4 == calc->add(1, 2)
+                </Original>
+                <Expanded>
+                    4 == 3
+                </Expanded>
+                <Info>
+                    test_sum3 测试失败.
+                </Info>
+            </Expression>
+            <OverallResultsAsserts successes="0" failures="2" test_case_success="false"/>
+        </TestCase>
+    </TestSuite>
+    <OverallResultsAsserts successes="2" failures="6"/>
+    <OverallResultsTestCases successes="1" failures="5" skipped="0"/>
+</doctest>
